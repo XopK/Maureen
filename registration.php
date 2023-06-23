@@ -16,7 +16,7 @@
     <?include "header.php"?>
     <h1 class="reg_title">Регистрация</h1>
     <div class="form_block">
-        <form method="POST" action="">
+        <form method="POST" action="/registrationDB.php">
             <input required class="reg_auth_input" type="text" name="name" placeholder="Имя">
             <input required class="reg_auth_input" type="text" name="surname" placeholder="Фамилия">
             <input required class="reg_auth_input" type="password" name="password" placeholder="Пароль">
