@@ -846,7 +846,8 @@ body{
 }
 .product_card_profile_up_img{
     background-color: white;
-    width: 85%;
+    height: 230px;
+    width: 230px;
     overflow: hidden;
     border-radius: 20px;
     display: flex;
@@ -895,7 +896,13 @@ body{
 
 /*------busket------*/
 
+.title_busket{
+    font-family: "Exo";
+    font-weight: 600;
+    margin: 30px 0;
+}
 .table_busket{
+    width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
 }
@@ -906,4 +913,47 @@ body{
     color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     font-size: 25px;
+}
+.input_count_busket{
+    max-width: 40px;
+    height: 30px;
+    text-align: center;
+    font-family: "Exo";
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #127369;
+    margin: 0 5px;
+    outline: none;
+}
+.td_busket{
+    text-align: center;
+    font-family: "Exo";
+    font-weight: 600;
+    font-size: 20px;
+}
+.td_busket img{
+    height: 200px;
+}
+.td_busket a img{
+    width: 25px;
+    height: 25px;
+}
+.tr_busket{
+    overflow: hidden;
+}
+.text_busket_info{
+    font-family: "Exo";
+    font-weight: 600;
+    font-size: 25px;
+}
+.info_busket{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.adres_input{
+    width: 40%;
+    text-align: center;
+    padding: 10px 20px;
 }

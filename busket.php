@@ -9,24 +9,31 @@
 <body>
     <?include "header.php"?>
     <div class="main_frame">
-        <h1>Корзина</h1>
+        <h1 class="title_busket">Корзина</h1>
         <table class="table_busket">
-            <tr>
+            <tr class="tr_busket">
                 <th class="th_busket">Товар</th>
                 <th class="th_busket">Название</th>
                 <th class="th_busket">Цена</th>
                 <th class="th_busket">Количество</th>
+                <th class="th_busket"></th>
             </tr>
-            <tr>
-                <td><img src="/img/309d3d87-10bf-492d-8ac3-b39efca69cd3.jpg" alt=""></td>
-                <td>Кофе</td>
-                <td>500 руб.</td>
-                <td>
-                    <input class="input_count" type="text" name="productСount" value="1">
+            <tr class="tr_busket">
+                <td class="td_busket"><img src="/img/309d3d87-10bf-492d-8ac3-b39efca69cd3.jpg" alt=""></td>
+                <td class="td_busket">Кофе</td>
+                <td class="td_busket">500 руб.</td>
+                <td class="td_busket">
+                    <input maxlength="3" required class="input_count_busket" type="text" pattern="[0-9]{1,3}" name="productСount" value="1">
                 </td>
-                <td><a href=""><img src="/img/cancel.svg" alt="cancel.svg"></a></td>
+                <td class="td_busket"><a href=""><img src="/img/cancel.svg" alt="cancel.svg"></a></td>
             </tr>
         </table>
+        <div class="info_busket">
+            <span class="text_busket_info">Доставка</span>
+            <input class="adres_input" type="text" name="adres">
+            <span class="text_busket_info">Итого: 2500</span>
+            <button class="request_input_but">Оформить</button>
+        </div>
     </div>
 </body>
 </html>
