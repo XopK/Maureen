@@ -42,14 +42,20 @@
             <h1 class="product_description_title">Описание</h1>
             <p class="product_description">В 1895 году знаток кофе Йохан Якобс открыл свою первую кофейную фабрику – Jacobs Coffee Roastery. Йохан привозил людям кофе в зёрнах самого высокого качества. Он вложил всю свою страсть и мастерство обжарки кофейных зёрен в создание бленда, который раскрывал всё богатство вкуса и аромата кофе.Сохраняя традиции отбора кофейных зёрен самого высокого качества и мастерства обжарки с 1895 года, Jacobs Monarch и сегодня дарит богатый насыщенный вкус и аромат кофе его ценителям.</p>
         </div>
+        <?php
+        include "connect.php";
+        $query = "select * from review";
+        ?>
         <div class="product_reviews_block">
             <h1 class="product_reviews_title">Отзывы</h1>
-            <form action="#">
+            <?if(isset($_SESSION['id_user'])){?>
+            <form action="review.php">
             <div class="review_answer">  
                     <input placeholder="Оставьте отзыв!" type="text">
                     <button><img src="/img/plus-white.svg" alt="plus-white.svg"></button>
             </div>
             </form>
+            <?}?>
             <div class="review_block">
                 <div class="review_img"><img src="/img/user.png" alt=""></div>
                 <div class="review_block_text">

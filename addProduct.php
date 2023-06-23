@@ -15,13 +15,14 @@
 <body>
     <h1 class="addProduct_title">Добавление товара</h1>
     <div class="form_block">
-        <form method="POST" action="">
+        <form method="POST" action="/addProductDB.php">
+            <input type="hidden" name="id" value="<?=$_SESSION['id_user']?>">
             <p><label for="name">Название</label></p>
             <input id="name" required class="reg_auth_input" type="text" name="name">
             <p><label for="photo">Фото</label></p>
             <input id="photo" required class="addProduct_file_input" type="file" name="photo">
             <p><label for="description">Описание</label></p>
-            <textarea class="textarea_addProduct" name="description" id="description"></textarea>
+            <textarea class="textarea_addProduct" name="desc" id="description"></textarea>
             <p><label for="amount">Количество</label></p>
             <input id="amount" required class="reg_auth_input" type="text" name="amount">
             <p><label for="cost">Цена</label></p>
