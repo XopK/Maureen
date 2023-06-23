@@ -955,5 +955,12 @@ body{
 .adres_input{
     width: 40%;
     text-align: center;
-    padding: 10px 20px;
+    padding: 8px 20px;
+    border: 2px solid #2FB1A4;
+    outline: none;
+    font-family: "Exo";
+    font-size: 18px;
+}
+.adres_input:focus{
+    border: 2px solid #127369;
 }
