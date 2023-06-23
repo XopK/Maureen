@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="product_card_profile_down">
                                     <p><?=$seller_info['name']?></p>
-                                    <div class="btn_product_card_profile"><a href="">Редактировать</a></div>
+                                    <div class="btn_product_card_profile"><a href="/editProduct.php">Редактировать</a></div>
                                     <div class="btn_product_card_profile"><a href="">Удалить</a></div>
                                 </div>
                             </div>
