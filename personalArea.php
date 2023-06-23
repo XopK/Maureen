@@ -45,14 +45,20 @@
             </button>
             <div class="request_send_form1">
                 <div class="request_send_form2">
-                    <form action="">
-                        <p><label for="ogrnip">Номер ОГРНИП</label></p>
-                        <input class="text_profile_input" id="ogrnip" name="ogrnip" type="text">
-                        <p><label for="passport">Копия паспорта</label></p>
-                        <input id="passport" name="passport" type="file">
-                        <p><label for="ip">Номер свидетельства ИП</label></p>
-                        <input class="text_profile_input" id="ip" name="ip" type="text">
-                        <input type="submit">
+                    <form action="#">
+                        <div class="request_input_block">
+                            <p><label for="ogrnip">Номер ОГРНИП</label></p>
+                            <input class="text_profile_input" id="ogrnip" name="ogrnip" type="text">
+                        </div>
+                        <div class="request_input_block">
+                            <p><label for="passport">Копия паспорта</label></p>
+                            <input id="passport" name="passport" type="file">
+                        </div>
+                        <div class="request_input_block">
+                            <p><label for="ip">Номер свидетельства ИП</label></p>
+                            <input class="text_profile_input" id="ip" name="ip" type="text">
+                        </div>
+                        <button class="request_input_but">Отправить</button>
                     </form>
                 </div>
             </div>

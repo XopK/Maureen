@@ -14,7 +14,7 @@ session_start();
         </form>
     </div>
     <div class="header_right">
-        <a href="/personalArea.php" >
+        <a class="btn_with_auth" href="/personalArea.php">
             <div class="personal_area_btn">
                 <div class="personal_area_btn_img">
                     <img src="/img/user-wh.png" alt="">
@@ -22,8 +22,23 @@ session_start();
                 <p><?echo $_SESSION['name']?></p>
             </div>
         </a>
+        <a class="btn_with_auth" href="busket.php" >
+            <div class="personal_area_btn">
+                <div class="personal_area_btn_img">
+                    <img src="/img/cart.svg" alt="">
+                </div>
+                <p>Корзина</p>
+            </div>
+        </a>
         <!-- <a href="/registration.php" class="btn_header">Регистрация</a>
         <a href="/authorization.php" class="btn_header">Войти</a> -->
-        <a href="/logout.php" class="btn_header">Выйти</a>
+        <a class="btn_with_auth" href="/logout.php" >
+            <div class="personal_area_btn">
+                <div class="personal_area_btn_img">
+                    <img src="/img/logout.png" alt="logout.png">
+                </div>
+                <p>Выйти</p>
+            </div>
+        </a>
     </div>
 </header>

@@ -47,6 +47,9 @@ a:focus{
 
 /*----header----*/
 
+.btn_with_auth{
+    margin-left: 25px;
+}
 .logo_mau{
     font-family: "Comforta";
     font-size: 36px;
@@ -780,12 +783,31 @@ body{
     font-weight: 600;
     font-size: 25px;
 }
+.request_input_block{
+    margin: 10px 0;
+}
 .text_profile_input{
-    margin-bottom: 20px;
     width: 500px;
-    padding: 10px;
+    padding: 8px;
+    font-family: "Exo";
+    font-size: 20px;
     border: 1px solid #127369;
     outline: none;
+}
+.request_input_but{
+    background-color: #127369;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-family: "Exo";
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.request_input_but:active{
+    background-color: #2FB1A4;
 }
 .product_list1{
     display: none;
@@ -861,4 +883,19 @@ body{
 }
 .card_add_product img{
     width: 60%;
+}
+
+/*------busket------*/
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th{
+    border-bottom: 2px solid #127369;
+    font-family: "Exo";
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-size: 25px;
 }
