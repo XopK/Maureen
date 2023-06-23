@@ -79,9 +79,7 @@
             <?
             }
             ?>
-            <?
-            if ($role_user == 3) {
-            ?>
+            <?if ($role_user == 3) {?>
                 <button id="but_product" class="title_order_profile">
                     Мои товары
                 </button>
@@ -90,9 +88,7 @@
                         <?
                         $product_seller = "SELECT * FROM `product` WHERE `id_seller` = '$id_user'";
                         $product_result = mysqli_query($con, $product_seller);
-
-                        while ($seller_info = mysqli_fetch_array($product_result)) {
-                        ?>
+                        while ($seller_info = mysqli_fetch_array($product_result)) {?>
                             <div class="product_card_profile">
                                 <div class="product_card_profile_up">
                                     <div class="product_card_profile_up_img">
@@ -101,19 +97,15 @@
                                 </div>
                                 <div class="product_card_profile_down">
                                     <p><?=$seller_info['name']?></p>
-                                    <div class="btn_product_card_profile"><a href="/editProduct.php">Редактировать</a></div>
+                                    <div class="btn_product_card_profile"><a href="/editProduct.php?product=<?=$seller_info['id_product']?>">Редактировать</a></div>
                                     <div class="btn_product_card_profile"><a href="">Удалить</a></div>
                                 </div>
                             </div>
-                        <?
-                        }
-                        ?>
+                        <?}?>
                         <a class="card_add_product" href="/addProduct.php"><img src="/img/plus-white.svg" alt="plus-white.svg"></a>
                     </div>
                 </div>
-            <?
-            }
-            ?>
+            <?}?>
         </div>
     </div>
     <script>
