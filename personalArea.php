@@ -1,11 +1,3 @@
-<?php
-require_once "connect.php";
-session_start();
-$id_user = $_SESSION['id_user'];
-$role_user = $_SESSION['role'];
-$user_info = "SELECT * FROM `users` WHERE `id_user` = '$id_user'";
-$user_result = mysqli_fetch_array(mysqli_query($con, $user_info));
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +9,14 @@ $user_result = mysqli_fetch_array(mysqli_query($con, $user_info));
     <script src="/js/jquery-3.7.0.min.js"></script>
     <title>Личный кабинет</title>
 </head>
-
+<?php
+require_once "connect.php";
+session_start();
+$id_user = $_SESSION['id_user'];
+$role_user = $_SESSION['role'];
+$user_info = "SELECT * FROM `users` WHERE `id_user` = '$id_user'";
+$user_result = mysqli_fetch_array(mysqli_query($con, $user_info));
+?>
 <body>
     <? include "header.php" ?>
     <div class="main_frame">
