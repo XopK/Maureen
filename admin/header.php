@@ -20,8 +20,8 @@
                     <div class="navbar-nav">
                         <a class="nav-link" href="./">Заявки</a>
                         <a class="nav-link" href="./productList.php">Товары</a>
-                        <a class="nav-link" href="#">Продавцы</a>
-                        <a class="nav-link" href="#">Пользователи</a>
+                        <a class="nav-link" href="./saller.php">Продавцы</a>
+                        <a class="nav-link" href="./users.php">Пользователи</a>
                     </div>
                 </div>
             </div>

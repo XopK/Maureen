@@ -16,7 +16,19 @@ session_start();
     <div class="header_right">
         <?
         if (isset($_SESSION['id_user'])) {
+            if ($_SESSION['role'] == 1) {
         ?>
+                <a class="btn_with_auth" href="/admin/">
+                    <div class="personal_area_btn">
+                        <div class="personal_area_btn_img">
+                            <img src="/img/user-wh.png" alt="">
+                        </div>
+                        <p><? echo $_SESSION['name'] ?></p>
+                    </div>
+                </a>
+            <?
+            }else{
+                ?>
             <a class="btn_with_auth" href="/personalArea.php">
                 <div class="personal_area_btn">
                     <div class="personal_area_btn_img">
@@ -33,14 +45,17 @@ session_start();
                     <p>Корзина</p>
                 </div>
             </a>
+            <?
+            }
+            ?>
             <a class="btn_with_auth" href="/logout.php">
-            <div class="personal_area_btn">
-                <div class="personal_area_btn_img">
-                    <img src="/img/logout.png" alt="logout.png">
+                <div class="personal_area_btn">
+                    <div class="personal_area_btn_img">
+                        <img src="/img/logout.png" alt="logout.png">
+                    </div>
+                    <p>Выйти</p>
                 </div>
-                <p>Выйти</p>
-            </div>
-        </a>
+            </a>
         <?
         } else {
         ?>

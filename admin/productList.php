@@ -1,31 +1,31 @@
 <?php
 include "./header.php";
+require_once "../connect.php";
+
+$product_admin = "SELECT * FROM `product`";
+$product_res = mysqli_query($con, $product_admin);
 ?>
 <div class="container">
     <table class="table caption-top">
-        <h2 style="margin: 20px 0 40px 0;">Список заявок</h2>
+        <h2 style="margin: 20px 0 40px 0;">Список товаров</h2>
         <thead>
             <tr>
                 <th scope="col">id</th>
                 <th scope="col">Товар</th>
+                <th scope="col">Дата добавления</th>
             </tr>
         </thead>
         <tbody>
             <?
 
-            while ($info_req = mysqli_fetch_array($query_result)) {
-                $dateB = $info_req['date_request'];
-                $newDate = date("d.m.Y", strtotime($dateB));
+            while ($product_info = mysqli_fetch_array($product_res)) {
+                $dateB = $product_info['date_added'];
+                $newDate = date("d.m.Y h:m:s", strtotime($dateB));
             ?>
                 <tr>
-                    <th scope="row"><?= $info_req['id_request'] ?></th>
-                    <td><?= $info_req['name'] ?> <?= $info_req['surname'] ?></td>
-                    <td><?= $info_req['num_ogrnip'] ?></td>
-                    <td><a href="../document/<?= $info_req['passport'] ?>" download="filename"><?= $info_req['passport'] ?></a></td>
-                    <td><?= $info_req['num_ip'] ?></td>
+                    <th><?= $product_info['id_product'] ?></th>
+                    <td><a href="../product.php"><?= $product_info['name'] ?></a></td>
                     <td><?= $newDate ?></td>
-                    <td><a href="" type="button" class="btn btn-success btn-sm">Принять</a></td>
-                    <td><a href="" type="button" class="btn btn-danger btn-sm">Отклонить</a></td>
                 </tr>
             <?
             }
