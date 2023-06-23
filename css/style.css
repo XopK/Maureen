@@ -973,3 +973,54 @@ body{
 .adres_input:focus{
     border: 2px solid #127369;
 }
+
+/*----addProduct-----*/
+
+.addProduct_title{
+    font-family: "Comforta";
+    font-weight: 600;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+.addProduct_back{
+    color: white;
+    font-family: "Comforta";
+    font-weight: 600;
+    font-size: 20px;
+}
+.textarea_addProduct{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-family: "Comforta";
+    font-weight: 600;
+    font-size: 17px;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    resize: none;
+}
+.addProduct_file_input{
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    padding: 10px;
+    text-align: center;
+    width: 54%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-family: "Comforta";
+    font-weight: 600;
+    font-size: 17px;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
