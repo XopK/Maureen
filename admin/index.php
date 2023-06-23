@@ -32,8 +32,8 @@ $query_result = mysqli_query($con, $request_query);
                     <td><a href="../document/<?=$info_req['passport']?>" download="filename"><?=$info_req['passport']?></a></td>
                     <td><?=$info_req['num_ip']?></td>
                     <td><?=$newDate?></td>
-                    <td><a href="" type="button" class="btn btn-success btn-sm">Принять</a></td>
-                    <td><a href="" type="button" class="btn btn-danger btn-sm">Отклонить</a></td>
+                    <td><a href="./update.php?yes=<?=$info_req['id_request']?>" type="button" class="btn btn-success btn-sm">Принять</a></td>
+                    <td><a href="./update.php?no=<?=$info_req['id_request']?>" type="button" class="btn btn-danger btn-sm">Отклонить</a></td>
                 </tr>
             <?
             }
