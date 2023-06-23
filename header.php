@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header>
     <div class="header_left">
         <a href="/" class="logo_mau">Maureen</a>
@@ -16,10 +19,11 @@
                 <div class="personal_area_btn_img">
                     <img src="/img/user-wh.png" alt="">
                 </div>
-                <p>Арслан</p>
+                <p><?echo $_SESSION['name']?></p>
             </div>
         </a>
-        <a href="/registration.php" class="btn_header">Регистрация</a>
-        <a href="/authorization.php" class="btn_header">Войти</a>
+        <!-- <a href="/registration.php" class="btn_header">Регистрация</a>
+        <a href="/authorization.php" class="btn_header">Войти</a> -->
+        <a href="/logout.php" class="btn_header">Выйти</a>
     </div>
 </header>

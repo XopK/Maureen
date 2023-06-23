@@ -16,7 +16,7 @@
     <?include "header.php"?>
     <h1 class="auth_title">Авторизация</h1>
     <div class="form_block">
-        <form method="POST" action="">
+        <form method="POST" action="/authorizationDB.php">
             <input required class="reg_auth_input" type="text" name="phone" placeholder="Телефон">
             <input required class="reg_auth_input" type="password" name="password" placeholder="Пароль">
             <div class="form_but_cent">
