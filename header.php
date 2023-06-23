@@ -6,9 +6,9 @@ session_start();
         <a href="/" class="logo_mau">Maureen</a>
     </div>
     <div class="header_center">
-        <form method="POST" action="#">
+        <form method="POST" action="/catalogue.php">
             <div class="search">
-                <input class="search_input" type="search" placeholder="Поиск">
+                <input class="search_input" type="search" placeholder="Поиск" name = "search">
                 <button class="btn_search"><img src="/img/loupe.png" alt="loupe.png"></button>
             </div>
         </form>
