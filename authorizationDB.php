@@ -12,7 +12,7 @@ if (!empty($_POST)) {
     if ($login_result) {
         echo "<script>alert('Успех'); location.href = '/';</script>";
         $_SESSION['id_user'] = $login_result['id_user'];
-        $_SESSION['role'] = $login_reslt['role'];
+        $_SESSION['role'] = $login_result['role'];
         $_SESSION['name'] = $login_result['name'];
     } else {
         echo "<script>alert('Ошибка');</script>";
