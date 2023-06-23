@@ -52,7 +52,7 @@
                         </div>
                         <div class="request_input_block">
                             <p><label for="passport">Копия паспорта</label></p>
-                            <input id="passport" name="passport" type="file">
+                            <input class="file_profile_input" id="passport" name="passport" type="file">
                         </div>
                         <div class="request_input_block">
                             <p><label for="ip">Номер свидетельства ИП</label></p>

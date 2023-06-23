@@ -786,6 +786,14 @@ body{
 .request_input_block{
     margin: 10px 0;
 }
+.file_profile_input{
+    width: 500px;
+    padding: 8px;
+    font-family: "Exo";
+    font-size: 20px;
+    border: 1px solid #127369;
+    outline: none;
+}
 .text_profile_input{
     width: 500px;
     padding: 8px;
@@ -887,11 +895,11 @@ body{
 
 /*------busket------*/
 
-table{
+.table_busket{
     border-collapse: collapse;
-    width: 100%;
+    margin: 0 auto;
 }
-th{
+.th_busket{
     border-bottom: 2px solid #127369;
     font-family: "Exo";
     font-weight: 400;
