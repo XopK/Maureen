@@ -31,7 +31,7 @@
         </table>
         <div class="info_busket">
             <span class="text_busket_info">Доставка</span>
-            <input class="adres_input" type="text" name="adres">
+            <input class="adres_input" type="text" name="adres" placeholder="Адрес">
             <span class="text_busket_info">Итого: 2500</span>
             <button class="request_input_but">Оформить</button>
         </div>

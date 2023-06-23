@@ -956,13 +956,14 @@ body{
     font-size: 25px;
 }
 .info_busket{
+    margin-top: 15px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .adres_input{
-    width: 40%;
+    width: 50%;
     text-align: center;
     padding: 8px 20px;
     border: 2px solid #2FB1A4;
