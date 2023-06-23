@@ -1,0 +1,828 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+a:focus{
+    outline: none;
+    border: none;
+}
+@font-face {
+    font-family: "Comforta";
+    src: url(/fonts/Comfortaa-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Comforta";
+    src: url(/fonts/Comfortaa-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Comforta";
+    src: url(/fonts/Comfortaa-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Comforta";
+    src: url(/fonts/Comfortaa-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Exo";
+    src: url(/fonts/Exo2-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Exo";
+    src: url(/fonts/Exo2-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Exo";
+    src: url(/fonts/Exo2-SemiBold.ttf);
+    font-weight: 600;
+}
+
+/*----header----*/
+
+.logo_mau{
+    font-family: "Comforta";
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+}
+header{
+    height: 80px;
+    width: 100%;
+    background-color: #127369;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn_header{
+    background-color: #10403B;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-family: "Exo";
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+}
+.header_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_left{
+    margin-left: 50px;
+}
+.header_right{
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+.search{
+    height: 35px;
+    width: 500px;
+    display: flex;
+    border: 2px solid #8AA6A3;
+    border-radius: 100px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+.search_input{
+    outline: none;
+    border: none;
+    font-family: "Exo";
+    font-weight: 300;
+    font-size: 20px;
+    margin-left: 20px;
+    width: 85%;
+}
+.btn_search{
+    height: 20px;
+    width: 20px;
+    outline: none;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.btn_search img{
+    width: 100%;
+    height: 100%;
+}
+.personal_area_btn{
+    height: 50px;
+    color: white;
+    font-family: "Exo";
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+}
+.personal_area_btn_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.personal_area_btn_img img{
+    height: 35px;
+    width: 35px;
+}
+
+/*-----index------*/
+
+.main_frame{
+    width: 1350px;
+    margin: 0 auto;
+}
+.hero{
+    width: 100%;
+    margin-top: 25px;
+}
+.hero1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.hero1_left{
+    width: 65%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.hero1_left_block{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.hero1_left_block img{
+    height: 100%;
+}
+.hero1_right_block{
+    height: 100%;
+    width: 50%;
+    background-color: #084641;
+    padding: 15px;
+    position: relative;
+}
+.hero1_right{
+    width: 32%;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    position: relative;
+}
+.hero1_right p{
+    position: absolute;
+    padding: 10px 15px;
+    background-color: #FB5555;
+    bottom: 8%;
+    left: 8%;
+    font-family: "Exo";
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+.hero1_right span{
+    position: absolute;
+    padding: 10px 15px;
+    background-color: #565656;
+    bottom: 9%;
+    left: 33%;
+    font-family: "Exo";
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: line-through;
+}
+.hero1_right img{
+    height: 100%;
+}
+.hero2_title{
+    font-family: "Exo";
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 35px;
+}
+.hero1_right_block_title{
+    font-family: "Exo";
+    font-size: 25px;
+    color: white;
+}
+.hero1_right_block_desc{
+    font-family: "Exo";
+    font-weight: 300;
+    font-size: 17px;
+    color: white;
+    margin-top: 10px;
+}
+.hero1_right_block_cost{
+    display: inline-block;
+    font-family: "Exo";
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+.hero1_right_block_btn{
+    background-color: #8AA6A3;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+.hero1_right_block_btn img{
+    width: 70%;
+    height: 70%;
+}
+
+/*-----catalogue-----*/
+
+.catalogue_title{
+    font-family: "Exo";
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 35px;
+}
+.catalogue{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.catalogue_card{
+    overflow: hidden;
+    width: 240px;
+    border: 2px solid #127369;
+    border-radius: 25px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.catalogue_img{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+.catalogue_img img{
+    height: 100%;
+}
+.catalogue_card_name{
+    font-family: "Exo";
+    font-weight: 600;
+    font-size: 25px;
+    margin-left: 8px;
+}
+.catalogue_card_cost{
+    display: inline-block;
+    font-family: "Exo";
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+.catalogue_card_btn{
+    background-color: #127369;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.catalogue_card_btn img{
+    width: 70%;
+    height: 70%;
+}
+.catalogue_card_cb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 91%;
+}
+
+/*---slider---*/
+
+*,
+*::before,
+*::after{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.itc-slider-item{
+    max-width: 20%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider_product_card{
+    height: 100%;
+    width: 85%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider_product_card img{
+    height: 100%;
+}
+.slider_cost{
+    position: absolute;
+    padding: 5px 15px;
+    background-color: #2FB1A4;
+    bottom: 5%;
+    left: 5%;
+    font-family: "Exo";
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*----reg-----*/
+
+.reg_title{
+    font-family: "Comforta";
+    font-weight: 600;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+.form_block{
+    width: 600px;
+    margin: 0 auto;
+}
+.reg_auth_input{
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-family: "Comforta";
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.form_btn{
+    background-color: #62D3C8;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 10px 25px;
+    font-family: "Comforta";
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0 8px 18px 1px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+}
+.form_but_cent{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*----auth-----*/
+
+.auth_title{
+    font-family: "Comforta";
+    font-weight: 600;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin-top: 220px;
+    margin-bottom: 20px;
+}
+
+/*----product----*/
+
+.count {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.count .change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 1px solid #127369;
+}
+.count .change img{
+    width: 50%;
+}
+.count_end{
+    margin-left: 25px;
+    font-family: "Exo";
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 15px;
+}
+.count .input_count {
+    max-width: 30px;
+    height: 30px;
+    text-align: center;
+    font-family: "Exo";
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #127369;
+    margin: 0 5px;
+}
+
+.product_frame{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    margin-top: 20px;
+}
+.product_frame_left{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product_frame_left img{
+    height: 100%;
+}
+.product_frame_right{
+    width: 40%;
+    height: 100%;
+}
+.product_frame_title{
+    font-family: "Exo";
+    font-size: 35px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.product_frame_cost{
+    font-family: "Exo";
+    font-size: 35px;
+    margin-top: 20px;
+}
+.product_frame_but{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+}
+.product_but_left{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #127369;
+    font-family: "Comforta";
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 45px;
+    border-radius: 100px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.product_but_right{
+    outline: none;
+    border: 2px solid #127369;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    font-family: "Comforta";
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 45px;
+    border-radius: 100px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 20px;
+}
+.product_seller{
+    margin-top: 30px;
+    font-family: "Exo";
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+.product_seller_photo{
+    width: 60px;
+    height: 60px;
+    margin-right: 25px;
+}
+.product_seller img{
+    height: 100%;
+    width: 100%;
+}
+.product_description_block{
+    width: 100%;
+}
+.product_description_title{
+    font-family: "Exo";
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.product_description{
+    font-family: "Exo";
+    font-weight: 600;
+}
+.product_reviews_block{
+    width: 100%;
+}
+.product_reviews_title{
+    font-family: "Exo";
+    text-align: left;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.review_block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.review_img{
+    width: 67px;
+    height: 67px;
+    overflow: hidden;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.review_img img{
+    width: 100%;
+    height: 100%;
+}
+.review_block_text{
+    width: 85%;
+    font-family: "Exo";
+}
+.review_name{
+    font-weight: 600;
+    font-size: 25px;
+}
+.review_date{
+    font-family: "Exo";
+    display: flex;
+    justify-content: right;
+    width: 80px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/*-----personal_area-----*/
+
+.profile{
+    width: 100%;
+}
+.profile_pic{
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.profile_pic img{
+    width: 100%;
+}
+.profile p{
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Exo";
+    font-weight: 600;
+    font-size: 30px;
+}
+.profile a{
+    color: #2FB1A4;
+    font-family: "Exo";
+    font-weight: 300;
+    font-size: 23px;
+}
+.orders_profile{
+    width: 100%;
+}
+.title_order_profile{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #127369;
+    color: white;
+    font-family: "Exo";
+    font-size: 25px;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    margin: 20px auto;
+    border: none;
+    cursor: pointer;
+}
+.orders_profile_list1{
+    display: none;
+    width: 100%;
+}
+.orders_profile_list2{
+    display: grid;
+    grid-template-columns: repeat(3, 440px);
+    width: 100%;
+    max-width: 1350px;
+    justify-content: center;
+    justify-items: center;
+    column-gap: 10px; /* Отступ между колонками */
+    row-gap: 10px; /* Отступ между рядами */
+}
+.order_card{
+    width: 440px;
+    height: 200px;
+    display: flex;
+    background-color:#127369;
+    border-radius: 20px;
+}
+.order_card_left{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order_card_left_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    background-color: white;
+}
+.order_card_left_img img{
+    width: 100%;
+}
+.order_card_right{
+    position: relative;
+    width: 55%;
+}
+.order_card_right p{
+    font-family: "Exo";
+    font-weight: 600;
+}
+.order_card_right_number{
+    font-size: 20px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+.order_card_right_name{
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.order_card_right_text{
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 5px;
+}
+.order_card_right_status{
+    color: white;
+    position: absolute;
+    bottom: 20px;
+}
+.request_send_form1{
+    display: none;
+    width: 100%;
+}
+.request_send_form2{
+    width: 100%;
+}
+.request_send_form2 label{
+    font-family: "Exo";
+    font-weight: 600;
+    font-size: 25px;
+}
+.text_profile_input{
+    margin-bottom: 20px;
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #127369;
+    outline: none;
+}
+.product_list1{
+    display: none;
+    width: 100%;
+}
+.product_list2{
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    width: 100%;
+    max-width: 1350px;
+    justify-content: center;
+    justify-items: center;
+    column-gap: 30px; /* Отступ между колонками */
+    row-gap: 30px; /* Отступ между рядами */
+}
+.product_card_profile{
+    width: 270px;
+    height: 430px;
+    background-color: #127369;
+    border-radius: 30px;
+}
+.product_card_profile_up{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product_card_profile_up_img{
+    background-color: white;
+    width: 85%;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product_card_profile_up_img img{
+    width: 100%;
+}
+.product_card_profile_down{
+    width: 100%;
+    height: 35%;
+}
+.product_card_profile_down p{
+    text-align: center;
+    color: white;
+    font-family: "Exo";
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn_product_card_profile{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.btn_product_card_profile a{
+    font-family: "Exo";
+    font-size: 18px;
+    color: white;
+    background-color: #2FB1A4;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+.card_add_product{
+    width: 270px;
+    height: 430px;
+    background-color: rgba(18, 115, 105, 0.5);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_add_product img{
+    width: 60%;
+}
+.review_answer{
+    width: 100%;
+}
