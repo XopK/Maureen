@@ -31,14 +31,17 @@
                     <span class="change minus min">
                         <img src="/img/minus.png" alt="minus.png">
                     </span>
-                    <input class="input_count" type="text" name="productСount" value="1" disabled="">
+                    <form action="/buscket.php" method="post" id="formBus">
+                        <input class="input_count" type="text" name="productСount" value="1">
+                        <input type="hidden" value="<?=$id?>" name = "id_buscket">
+                    </form>
                     <span class="change plus">
                         <img src="/img/plus.png" alt="plus.png">
                     </span>
                     <span class="count_end">Количество: <?= $select_result['amount'] ?></span>
                 </div>
                 <div class="product_frame_but">
-                    <button class="product_but_left">В корзину</button>
+                    <button form="formBus" class="product_but_left">В корзину</button>
                 </div>
                 <div class="product_seller">
                     <div class="product_seller_photo"><img src="/img/user.png" alt=""></div>
@@ -63,7 +66,7 @@
             <? if (isset($_SESSION['id_user'])) { ?>
                 <form action="/reviewDB.php" method="post">
                     <div class="review_answer">
-                        <input type="hidden" value="<?=$id?>" name="id_rev">
+                        <input type="hidden" value="<?= $id ?>" name="id_rev">
                         <input placeholder="Оставьте отзыв!" type="text" name="comment">
                         <button><img src="/img/plus-white.svg" alt="plus-white.svg"></button>
                     </div>
@@ -77,11 +80,11 @@
                 <div class="review_block">
                     <div class="review_img"><img src="/img/user.png" alt=""></div>
                     <div class="review_block_text">
-                        <h1 class="review_name"><?=$review_info['name']?> <?=$review_info['surname']?></h1>
-                        <p class="review_text"><?=$review_info['comment']?></p>
+                        <h1 class="review_name"><?= $review_info['name'] ?> <?= $review_info['surname'] ?></h1>
+                        <p class="review_text"><?= $review_info['comment'] ?></p>
                     </div>
                     <div class="review_date">
-                        <p><?=$newDate?></p>
+                        <p><?= $newDate ?></p>
                     </div>
                 </div>
             <?

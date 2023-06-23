@@ -37,7 +37,7 @@ session_start();
                     <p><? echo $_SESSION['name'] ?></p>
                 </div>
             </a>
-            <a class="btn_with_auth" href="busket.php">
+            <a class="btn_with_auth" href="buscket.php">
                 <div class="personal_area_btn">
                     <div class="personal_area_btn_img">
                         <img src="/img/cart.svg" alt="">
