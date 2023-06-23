@@ -15,7 +15,8 @@
     require_once "connect.php";
     ?>
     <?php
-    $product_select = "SELECT id_product, users.name AS name_user, product.name AS product_name, photo_product, description, amount, cost, date_added, id_seller, surname FROM `product` JOIN `users` ON `users`.`id_user` = `product`.`id_seller` WHERE id_product = 8";
+    $id = !empty($_GET['id_catalogue'])?$_GET['id_catalogue']:false;
+    $product_select = "SELECT id_product, users.name AS name_user, product.name AS product_name, photo_product, description, amount, cost, date_added, id_seller, surname FROM `product` JOIN `users` ON `users`.`id_user` = `product`.`id_seller` WHERE id_product = '$id'";
     $select_result = mysqli_fetch_array(mysqli_query($con,$product_select));
     ?>
     <div class="main_frame">
@@ -50,7 +51,7 @@
         </div>
         <div class="product_description_block">
             <h1 class="product_description_title">Описание</h1>
-            <p class="product_description">В 1895 году знаток кофе Йохан Якобс открыл свою первую кофейную фабрику – Jacobs Coffee Roastery. Йохан привозил людям кофе в зёрнах самого высокого качества. Он вложил всю свою страсть и мастерство обжарки кофейных зёрен в создание бленда, который раскрывал всё богатство вкуса и аромата кофе.Сохраняя традиции отбора кофейных зёрен самого высокого качества и мастерства обжарки с 1895 года, Jacobs Monarch и сегодня дарит богатый насыщенный вкус и аромат кофе его ценителям.</p>
+            <p class="product_description"><?=$select_result['description']?></p>
         </div>
         <?php
         include "connect.php";
