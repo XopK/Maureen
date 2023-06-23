@@ -19,7 +19,7 @@
     <div class="form_block">
         <form method="POST" action="/authorizationDB.php">
             <p><label for="phone">Телефон</label></p>
-            <input id="phone" required class="reg_auth_input" type="text" name="phone">
+            <input id="phone" required class="reg_auth_input" type="text" name="phone" >
             <p><label for="password">Пароль</label></p>
             <input id="password" required class="reg_auth_input" type="password" name="password">
             <div class="form_but_cent">

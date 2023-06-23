@@ -21,6 +21,9 @@
 
     $rand_query = "SELECT * FROM `product` WHERE id_product > 1 ORDER BY rand() LIMIT 1";
     $result_rand = mysqli_fetch_array(mysqli_query($con, $rand_query));
+
+    $rand_query1 = "SELECT * FROM `product` WHERE id_product > 1 ORDER BY rand() LIMIT 1";
+    $result_rand1 = mysqli_fetch_array(mysqli_query($con, $rand_query1));
     ?>
     <? include "header.php" ?>
     <div class="main_frame">
@@ -34,13 +37,12 @@
                         <p class="hero1_right_block_title"><?= $result_rand['name']; ?></p>
                         <p class="hero1_right_block_desc"><?= $result_rand['description']; ?> </span>
                         <p class="hero1_right_block_cost"><?= $result_rand['cost']; ?> ₽</p>
-                        <a class="hero1_right_block_btn" href=""><img src="/img/cart.svg" alt="cart.svg"></a>
+                        <a class="hero1_right_block_btn" href="/product.php?id_catalogue=<?= $result_rand['id_product'] ?>"><img src="/img/cart.svg" alt="cart.svg"></a>
                     </div>
                 </div>
                 <div class="hero1_right">
-                    <img src="/img/6442355251.webp" alt="adas">
-                    <p>1200₽</p>
-                    <span>2000₽</span>
+                    <img src="/img/<?= $result_rand1['photo_product']?> " alt="<?= $result_rand1['photo_product']?>">
+                    <p><?= $result_rand1['cost']?>₽</p>
                 </div>
             </div>
             <div class="hero2">
@@ -56,7 +58,7 @@
                                         <a href="/product.php?id_catalogue=<?= $new_info['id_product'] ?>">
                                             <div class="slider_product_card">
                                                 <img src="/img/<?= $new_info['photo_product'] ?>" alt="<?= $new_info['photo_product'] ?>">
-                                                <p class="slider_cost"><?= $new_info['cost'] ?></p>
+                                                <p class="slider_cost"><?= $new_info['cost']?>₽</p>
                                             </div>
                                         </a>
                                     </div>

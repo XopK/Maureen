@@ -8,8 +8,8 @@ if (!empty($_POST)) {
     $phone = $_POST['phone'];
     $email = $_POST['email'];
 
-    $addUser = "INSERT INTO `users`(`id_user`, `name`, `surname`, `photo_profile`, `password`, `phone`, `email`, `role`) 
-    VALUES (null,'$name','$surname','default-user-pic.png','$password','$phone','$email', 2)";
+    $addUser = "INSERT INTO `users`(`id_user`, `name`, `surname`, `password`, `phone`, `email`, `role`) 
+    VALUES (null,'$name','$surname','$password','$phone','$email', 2)";
     $addUser_Result = mysqli_query($con, $addUser);
 
     if ($addUser_Result) {
