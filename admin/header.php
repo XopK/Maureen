@@ -22,6 +22,7 @@
                         <a class="nav-link" href="./productList.php">Товары</a>
                         <a class="nav-link" href="./saller.php">Продавцы</a>
                         <a class="nav-link" href="./users.php">Пользователи</a>
+                        <a class="nav-link" href="../">На главную</a>
                     </div>
                 </div>
             </div>
