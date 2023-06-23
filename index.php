@@ -16,7 +16,7 @@
     <?php
     require_once "connect.php";
 
-    $new_product = "SELECT * FROM `product` ORDER BY `product`.`date_added` ASC";
+    $new_product = "SELECT * FROM `product` ORDER BY `product`.`date_added` DESC LIMIT 20";
     $result_new = mysqli_query($con, $new_product);
     ?>
     <? include "header.php" ?>
@@ -51,8 +51,8 @@
                                 ?>
                                     <div class="itc-slider-item">
                                         <div class="slider_product_card">
-                                            <img src="/img/<?=$new_info['photo_product']?>" alt="<?=$new_info['photo_product']?>">
-                                            <p class="slider_cost"><?=$new_info['cost']?></p>
+                                            <img src="/img/<?= $new_info['photo_product'] ?>" alt="<?= $new_info['photo_product'] ?>">
+                                            <p class="slider_cost"><?= $new_info['cost'] ?></p>
                                         </div>
                                     </div>
                                 <?
@@ -66,18 +66,28 @@
                 </div>
             </div>
         </div>
+        <?php
+        $catalog = "SELECT * FROM `product`";
+        $result_catalog = mysqli_query($con, $catalog);
+        ?>
         <h1 class="catalogue_title">Каталог</h1>
         <div class="catalogue">
-            <div class="catalogue_card">
-                <div class="catalogue_img">
-                    <img src="/img/309d3d87-10bf-492d-8ac3-b39efca69cd3.jpg" alt="">
+            <?
+            while ($catalog_info = mysqli_fetch_array($result_catalog)) {
+            ?>
+                <div class="catalogue_card">
+                    <div class="catalogue_img">
+                        <img src="/img/<?=$catalog_info['photo_product']?>" alt="<?=$catalog_info['photo_product']?>">
+                    </div>
+                    <p class="catalogue_card_name"><?=$catalog_info['name']?></p>
+                    <div class="catalogue_card_cb">
+                        <p class="catalogue_card_cost"><?=$catalog_info['cost']?></p>
+                        <a class="catalogue_card_btn" href="/product.php"><img src="/img/cart.svg" alt="cart.svg"></a>
+                    </div>
                 </div>
-                <p class="catalogue_card_name">Кофе "Jacobs"</p>
-                <div class="catalogue_card_cb">
-                    <p class="catalogue_card_cost">500₽</p>
-                    <a class="catalogue_card_btn" href="/product.php"><img src="/img/cart.svg" alt="cart.svg"></a>
-                </div>
-            </div>
+            <?
+            }
+            ?>
         </div>
     </div>
 
