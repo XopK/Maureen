@@ -579,6 +579,45 @@ body{
     margin-top: 30px;
     margin-bottom: 20px;
 }
+.review_answer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.review_answer input{
+    width: 80%;
+    padding: 5px 15px;
+    font-family: "Exo";
+    font-size: 18px;
+    margin-right: 5px;
+    border-radius: 15px;
+    height: 50px;
+    border: 2px solid #127369;
+    outline: none;
+}
+.review_answer input:focus{
+    border: 2px solid #084641;
+}
+.review_answer button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: #127369;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.review_answer button:active{
+    background-color: #189487;
+}
+.review_answer button img{
+    width: 80%;
+}
 .review_block{
     width: 100%;
     display: flex;
@@ -822,7 +861,4 @@ body{
 }
 .card_add_product img{
     width: 60%;
-}
-.review_answer{
-    width: 100%;
 }

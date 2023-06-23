@@ -44,12 +44,12 @@
         </div>
         <div class="product_reviews_block">
             <h1 class="product_reviews_title">Отзывы</h1>
-            <div class="review_answer">
-                <form action="">
-                    <input type="text">
+            <form action="#">
+            <div class="review_answer">  
+                    <input placeholder="Оставьте отзыв!" type="text">
                     <button><img src="/img/plus-white.svg" alt="plus-white.svg"></button>
-                </form>
             </div>
+            </form>
             <div class="review_block">
                 <div class="review_img"><img src="/img/user.png" alt=""></div>
                 <div class="review_block_text">
