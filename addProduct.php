@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,20 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Добавить товар</title>
     <style>
-        body{
+        body {
             background: #127369;
         }
     </style>
 </head>
+
 <body>
+    <?php
+    session_start();
+    ?>
     <h1 class="addProduct_title">Добавление товара</h1>
     <div class="form_block">
-        <form method="POST" action="/addProductDB.php">
-            <input type="hidden" name="id" value="<?=$_SESSION['id_user']?>">
+        <form method="POST" action="/addProductDB.php" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?= $_SESSION['id_user'] ?>">
             <p><label for="name">Название</label></p>
             <input id="name" required class="reg_auth_input" type="text" name="name">
             <p><label for="photo">Фото</label></p>
@@ -34,4 +39,5 @@
         </form>
     </div>
 </body>
+
 </html>
