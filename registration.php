@@ -17,11 +17,16 @@
     <h1 class="reg_title">Регистрация</h1>
     <div class="form_block">
         <form method="POST" action="/registrationDB.php">
-            <input required class="reg_auth_input" type="text" name="name" placeholder="Имя">
-            <input required class="reg_auth_input" type="text" name="surname" placeholder="Фамилия">
-            <input required class="reg_auth_input" type="password" name="password" placeholder="Пароль">
-            <input required class="reg_auth_input" type="text" name="phone" placeholder="Телефон">
-            <input required class="reg_auth_input" type="email" name="email" placeholder="Email">
+            <p><label for="name">Имя</label></p>
+            <input id="name" required class="reg_auth_input" type="text" name="name">
+            <p><label for="surname">Фамилия</label></p> 
+            <input id="surname" required class="reg_auth_input" type="text" name="surname">
+            <p><label for="password">Пароль</label></p>
+            <input id="password" required class="reg_auth_input" type="password" name="password">
+            <p><label for="phone">Телефон</label></p>
+            <input id="phone" required class="reg_auth_input" type="text" name="phone">
+            <p><label for="email">Email</label></p>
+            <input id="email" required class="reg_auth_input" type="email" name="email">
             <div class="form_but_cent">
                 <button class="form_btn">Зарегистрироваться</button>
             </div>
