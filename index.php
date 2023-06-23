@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +11,15 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Maureen</title>
 </head>
+
 <body>
-    <?include "header.php"?>
+    <?php
+    require_once "connect.php";
+
+    $new_product = "SELECT * FROM `product` ORDER BY `product`.`date_added` ASC";
+    $result_new = mysqli_query($con, $new_product);
+    ?>
+    <? include "header.php" ?>
     <div class="main_frame">
         <div class="hero">
             <div class="hero1">
@@ -38,12 +46,18 @@
                     <div class="itc-slider" data-slider="itc-slider" data-loop="false" data-autoplay="false">
                         <div class="itc-slider-wrapper">
                             <div class="itc-slider-items">
-                                <div class="itc-slider-item">
-                                    <div class="slider_product_card">
-                                        <img src="/img/6587251346.webp" alt="">
-                                        <p class="slider_cost">500₽</p>
+                                <?
+                                while ($new_info = mysqli_fetch_array($result_new)) {
+                                ?>
+                                    <div class="itc-slider-item">
+                                        <div class="slider_product_card">
+                                            <img src="/img/<?=$new_info['photo_product']?>" alt="<?=$new_info['photo_product']?>">
+                                            <p class="slider_cost"><?=$new_info['cost']?></p>
+                                        </div>
                                     </div>
-                                </div>
+                                <?
+                                }
+                                ?>
                             </div>
                         </div>
                         <button class="itc-slider-btn itc-slider-btn-prev"></button>
@@ -70,19 +84,23 @@
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
+
         function nextSlide() {
             showSlides(slideIndex += 1);
         }
+
         function previousSlide() {
             showSlides(slideIndex -= 1);
         }
+
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
+
         function showSlides(n) {
             let slides = document.getElementsByClassName("item");
             if (n > slides.length) {
-            slideIndex = 1
+                slideIndex = 1
             }
             if (n < 1) {
                 slideIndex = slides.length
@@ -94,4 +112,5 @@
         }
     </script>
 </body>
+
 </html>
