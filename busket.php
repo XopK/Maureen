@@ -10,15 +10,21 @@
     <?include "header.php"?>
     <div class="main_frame">
         <h1>Корзина</h1>
-        <table>
+        <table class="table_busket">
             <tr>
-                <th>Товар</th>
-                <th>Название</th>
-                <th>Цена</th>
-                <th>Количество</th>
+                <th class="th_busket">Товар</th>
+                <th class="th_busket">Название</th>
+                <th class="th_busket">Цена</th>
+                <th class="th_busket">Количество</th>
             </tr>
             <tr>
-                <td><img src="" alt=""></td>
+                <td><img src="/img/309d3d87-10bf-492d-8ac3-b39efca69cd3.jpg" alt=""></td>
+                <td>Кофе</td>
+                <td>500 руб.</td>
+                <td>
+                    <input class="input_count" type="text" name="productСount" value="1">
+                </td>
+                <td><a href=""><img src="/img/cancel.svg" alt="cancel.svg"></a></td>
             </tr>
         </table>
     </div>
