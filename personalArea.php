@@ -59,7 +59,8 @@ $user_result = mysqli_fetch_array(mysqli_query($con, $user_info));
                 </button>
                 <div class="request_send_form1">
                     <div class="request_send_form2">
-                        <form action="#">
+                        <form action="/requestDB.php" method="post" enctype="multipart/form-data">
+                            <input type="hidden" value="<?=$id_user?>" name = "id_user">
                             <div class="request_input_block">
                                 <p><label for="ogrnip">Номер ОГРНИП</label></p>
                                 <input class="text_profile_input" id="ogrnip" name="ogrnip" type="text">
