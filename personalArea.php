@@ -97,8 +97,10 @@
                                 </div>
                                 <div class="product_card_profile_down">
                                     <p><?=$seller_info['name']?></p>
-                                    <div class="btn_product_card_profile"><a href="/editProduct.php?product=<?=$seller_info['id_product']?>">Редактировать</a></div>
-                                    <div class="btn_product_card_profile"><a href="/deleteProduct.php?product2=<?=$seller_info['id_product']?>">Удалить</a></div>
+                                    <div class="bottom_product_card">
+                                        <div class="btn_product_card_profile"><a href="/editProduct.php?product=<?=$seller_info['id_product']?>">Редактировать</a></div>
+                                        <div class="btn_product_card_profile"><a href="/deleteProduct.php?product2=<?=$seller_info['id_product']?>">Удалить</a></div>
+                                    </div>
                                 </div>
                             </div>
                         <?}?>

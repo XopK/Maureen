@@ -76,14 +76,17 @@
             while ($catalog_info = mysqli_fetch_array($result_catalog)) {
             ?>
                 <div class="catalogue_card">
-                    <div class="catalogue_img">
-                        <img src="/img/<?=$catalog_info['photo_product']?>" alt="<?=$catalog_info['photo_product']?>">
-                    </div>
-                    <p class="catalogue_card_name"><?=$catalog_info['name']?></p>
-                    <div class="catalogue_card_cb">
-                        <p class="catalogue_card_cost"><?=$catalog_info['cost']?></p>
-                        <a class="catalogue_card_btn" href="/product.php"><img src="/img/cart.svg" alt="cart.svg"></a>
-                    </div>
+                    <a href="/product.php">
+                        <div class="catalogue_card_up">
+                            <div class="catalogue_img">
+                                <img src="/img/<?=$catalog_info['photo_product']?>" alt="<?=$catalog_info['photo_product']?>">
+                            </div>
+                        </div>
+                        <div class="catalogue_card_down">
+                            <p class="catalogue_card_name"><?=$catalog_info['name']?></p>
+                                <p class="catalogue_card_cost"><?=$catalog_info['cost']?>₽</p>
+                        </div>
+                    </a>
                 </div>
             <?
             }
