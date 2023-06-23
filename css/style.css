@@ -388,12 +388,21 @@ body{
     font-size: 35px;
     color: white;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 110px;
     margin-bottom: 20px;
 }
 .form_block{
     width: 600px;
     margin: 0 auto;
+}
+.form_block p{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.form_block p label{
+    color: white;
+    font-family: "Exo";
+    font-size: 20px;
 }
 .reg_auth_input{
     outline: none;
@@ -404,7 +413,7 @@ body{
     width: 80%;
     display: block;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-family: "Comforta";
     font-weight: 600;
     font-size: 20px;
@@ -615,7 +624,7 @@ body{
     outline: none;
     cursor: pointer;
 }
-.review_answer button:active{
+.review_answer button:hover{
     background-color: #189487;
 }
 .review_answer button img{
@@ -814,7 +823,7 @@ body{
     padding: 10px 20px;
     cursor: pointer;
 }
-.request_input_but:active{
+.request_input_but:hover{
     background-color: #2FB1A4;
 }
 .product_list1{

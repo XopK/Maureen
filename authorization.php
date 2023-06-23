@@ -17,8 +17,10 @@
     <h1 class="auth_title">Авторизация</h1>
     <div class="form_block">
         <form method="POST" action="/authorizationDB.php">
-            <input required class="reg_auth_input" type="text" name="phone" placeholder="Телефон">
-            <input required class="reg_auth_input" type="password" name="password" placeholder="Пароль">
+            <p><label for="phone">Телефон</label></p>
+            <input id="phone" required class="reg_auth_input" type="text" name="phone">
+            <p><label for="password">Пароль</label></p>
+            <input id="password" required class="reg_auth_input" type="password" name="password">
             <div class="form_but_cent">
                 <button class="form_btn">Войти</button>
             </div>
