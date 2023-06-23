@@ -29,7 +29,7 @@
             while ($catalog_info = mysqli_fetch_array($result_catalog)) {
             ?>
                 <div class="catalogue_card">
-                    <a href="/product.php">
+                    <a href="/product.php?id_catalogue=<?= $catalog_info['id_product'] ?>">
                         <div class="catalogue_card_up">
                             <div class="catalogue_img">
                                 <img src="/img/<?= $catalog_info['photo_product'] ?>" alt="<?= $catalog_info['photo_product'] ?>">

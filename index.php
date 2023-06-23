@@ -16,8 +16,11 @@
     <?php
     require_once "connect.php";
 
-    $new_product = "SELECT * FROM `product` ORDER BY `product`.`date_added` DESC LIMIT 20";
+    $new_product = "SELECT * FROM `product` ORDER BY `product`.`date_added` DESC LIMIT 10";
     $result_new = mysqli_query($con, $new_product);
+
+    $rand_query = "SELECT * FROM `product` WHERE id_product > 1 ORDER BY rand() LIMIT 1";
+    $result_rand = mysqli_fetch_array(mysqli_query($con, $rand_query));
     ?>
     <? include "header.php" ?>
     <div class="main_frame">
@@ -25,12 +28,12 @@
             <div class="hero1">
                 <div class="hero1_left">
                     <div class="hero1_left_block">
-                        <img src="/img/6526591210.webp" alt="uou">
+                        <img src="/img/<?= $result_rand['photo_product']; ?> " alt="<?= $result_rand['photo_product']; ?> ">
                     </div>
                     <div class="hero1_right_block">
-                        <p class="hero1_right_block_title">Мягкая игрушка ”Большой русский кот ШЛЁПА”</p>
-                        <p class="hero1_right_block_desc">Игрушки нашего бренда производятся в РОССИИ в городе ИВАНОВО. Все материалы безопасны для здоровья и сертифицированы для детей старше трех лет. </span>
-                        <p class="hero1_right_block_cost">1500₽</p>
+                        <p class="hero1_right_block_title"><?= $result_rand['name']; ?></p>
+                        <p class="hero1_right_block_desc"><?= $result_rand['description']; ?> </span>
+                        <p class="hero1_right_block_cost"><?= $result_rand['cost']; ?> ₽</p>
                         <a class="hero1_right_block_btn" href=""><img src="/img/cart.svg" alt="cart.svg"></a>
                     </div>
                 </div>
@@ -50,10 +53,12 @@
                                 while ($new_info = mysqli_fetch_array($result_new)) {
                                 ?>
                                     <div class="itc-slider-item">
-                                        <div class="slider_product_card">
-                                            <img src="/img/<?= $new_info['photo_product'] ?>" alt="<?= $new_info['photo_product'] ?>">
-                                            <p class="slider_cost"><?= $new_info['cost'] ?></p>
-                                        </div>
+                                        <a href="/product.php?id_catalogue=<?= $new_info['id_product'] ?>">
+                                            <div class="slider_product_card">
+                                                <img src="/img/<?= $new_info['photo_product'] ?>" alt="<?= $new_info['photo_product'] ?>">
+                                                <p class="slider_cost"><?= $new_info['cost'] ?></p>
+                                            </div>
+                                        </a>
                                     </div>
                                 <?
                                 }
@@ -76,15 +81,15 @@
             while ($catalog_info = mysqli_fetch_array($result_catalog)) {
             ?>
                 <div class="catalogue_card">
-                    <a href="/product.php?id_catalogue=<?=$catalog_info['id_product']?>">
+                    <a href="/product.php?id_catalogue=<?= $catalog_info['id_product'] ?>">
                         <div class="catalogue_card_up">
                             <div class="catalogue_img">
-                                <img src="/img/<?=$catalog_info['photo_product']?>" alt="<?=$catalog_info['photo_product']?>">
+                                <img src="/img/<?= $catalog_info['photo_product'] ?>" alt="<?= $catalog_info['photo_product'] ?>">
                             </div>
                         </div>
                         <div class="catalogue_card_down">
-                            <p class="catalogue_card_name"><?=$catalog_info['name']?></p>
-                                <p class="catalogue_card_cost"><?=$catalog_info['cost']?>₽</p>
+                            <p class="catalogue_card_name"><?= $catalog_info['name'] ?></p>
+                            <p class="catalogue_card_cost"><?= $catalog_info['cost'] ?>₽</p>
                         </div>
                     </a>
                 </div>
