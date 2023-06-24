@@ -19,3 +19,4 @@ if (!empty($_POST)) {
         echo mysqli_error($con);
     }
 }
+?>
