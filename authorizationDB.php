@@ -13,13 +13,14 @@ if (!empty($_POST)) {
         $_SESSION['id_user'] = $login_result['id_user'];
         $_SESSION['role'] = $login_result['role'];
         $_SESSION['name'] = $login_result['name'];
+        $code_cart = rand(1000, 99999);
+        $_SESSION['order'] = $code_cart;
         if ($_SESSION['role'] == 1) {
             echo "<script>location.href ='/admin'</script>";
         } else {
-            echo "<script>alert('Успех'); location.href = '/';</script>";
+            echo "<script>alert('Вы успешно авторизировались'); location.href = '/';</script>";
         }
     } else {
-        echo "<script>alert('Ошибка');</script>";
-        echo mysqli_error($con);
+        echo "<script>alert('Ошибка'); location.href = '/authorization.php';</script>";
     }
 }

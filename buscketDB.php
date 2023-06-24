@@ -1,8 +1,17 @@
 <?php
+session_start();
+require_once "connect.php";
 if (!empty($_POST)){
     $adres = $_POST['adres'];
-    $code = rand(1000, 99999);
+    $id_cart = $_SESSION['order'];
+    $update = "UPDATE `order` SET `adress`='$adres', `status` = 2 WHERE code_order = '$id_cart'";
+    $result_update = mysqli_query($con,$update);
 
-    $update = "UPDATE `order` SET `code_order`='$code',`adress`='$adres' WHERE id_order = "
+    if($result_update) {
+        echo "<script>alert('Заказ оформлен'); location.href = '/';</script>";
+    } else {
+        echo "<script>alert('Ошибка');</script>";
+        echo mysqli_error($con);
+    }
 }
 ?>

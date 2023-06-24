@@ -10,11 +10,9 @@
 </head>
 
 <body>
-    <?
+    <?php
     include "header.php";
     require_once "connect.php";
-    ?>
-    <?php
     $id = !empty($_GET['id_catalogue']) ? $_GET['id_catalogue'] : false;
     $product_select = "SELECT id_product, users.name AS name_user, product.name AS product_name, photo_product, description, amount, cost, date_added, id_seller, surname FROM `product` JOIN `users` ON `users`.`id_user` = `product`.`id_seller` WHERE id_product = '$id'";
     $select_result = mysqli_fetch_array(mysqli_query($con, $product_select));
@@ -22,7 +20,7 @@
     <div class="main_frame">
         <div class="product_frame">
             <div class="product_frame_left">
-                <img src="/img/<?= $select_result['photo_product'] ?>" alt="<?= $select_result['photo_product'] ?>">
+                <img src="/img/<?= $select_result['photo_product']?>" alt="<?= $select_result['photo_product'] ?>">
             </div>
             <div class="product_frame_right">
                 <p class="product_frame_title"><?= $select_result['product_name'] ?></p>

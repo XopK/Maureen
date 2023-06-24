@@ -19,13 +19,13 @@
     <div class="form_block">
         <form method="POST" action="/registrationDB.php">
             <p><label for="name">Имя</label></p>
-            <input id="name" required class="reg_auth_input" type="text" name="name">
+            <input id="name" required class="reg_auth_input" type="text" name="name" pattern="^[А-Яа-яЁё]{5,}$">
             <p><label for="surname">Фамилия</label></p> 
-            <input id="surname" required class="reg_auth_input" type="text" name="surname">
+            <input id="surname" required class="reg_auth_input" type="text" name="surname" pattern="^[А-Яа-яЁё]{5,}$">
             <p><label for="password">Пароль</label></p>
-            <input id="password" required class="reg_auth_input" type="password" name="password">
+            <input id="password" required class="reg_auth_input" type="password" name="password" pattern="^(?=^.{8,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
             <p><label for="phone">Телефон</label></p>
-            <input id="phone" required class="reg_auth_input" type="text" name="phone">
+            <input id="phone" required class="reg_auth_input" type="text" name="phone" pattern="[0-9]{11}">
             <p><label for="email">Email</label></p>
             <input id="email" required class="reg_auth_input" type="email" name="email">
             <div class="form_but_cent">

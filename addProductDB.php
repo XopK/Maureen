@@ -14,7 +14,7 @@ if(!empty($_POST)){
     $product_query = "INSERT INTO `product`(`id_product`, `name`, `photo_product`, `description`, `amount`, `cost`, `id_seller`, `date_added`) VALUES (null,'$name','$filename','$desc','$amount','$cost','$id','$date')";
     $result_request = mysqli_query($con,$product_query);
     if ($result_request) {
-        echo "<script>alert('Успех'); location.href = '/personalArea.php';</script>";
+        echo "<script>alert('Товар добавлен'); location.href = '/personalArea.php';</script>";
         move_uploaded_file($_FILES['photo']['tmp_name'], $path);
     } else {
         echo "<script>alert('Ошибка');</script>";

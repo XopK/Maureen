@@ -2,13 +2,16 @@
 session_start();
 require_once "connect.php";
 $id_user = $_SESSION['id_user'];
-$id_product = $_POST['id_buscket'];
-$count = $_POST['productСount'];
-$dateBas = date("Y-m-d h:m:s");
-$insert_prod = "INSERT INTO `order`(`id_order`, `code_order`, `product`, `user`, `adress`, `date_order`, `status`, `count`)
-    VALUES (null,'-','$id_product','$id_user','-','$dateBas', 2,'$count')";
-$res_prod = mysqli_query($con, $insert_prod);
-
+if(!empty($_POST)){
+    $id_product = $_POST['id_buscket'];
+    $count = $_POST['productСount'];
+    $dateBas = date("Y-m-d h:m:s");
+    $code_query = $_SESSION['order'];
+    $insert_prod = "INSERT INTO `order`(`id_order`, `code_order`, `product`, `user`, `adress`, `date_order`, `status`, `count`)
+        VALUES (null,'$code_query','$id_product','$id_user','-','$dateBas', 3,'$count')";
+    $res_prod = mysqli_query($con, $insert_prod);
+    
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +37,7 @@ $res_prod = mysqli_query($con, $insert_prod);
                 <th class="th_busket"></th>
             </tr>
             <?
-            $output = "SELECT * FROM `order` JOIN `product` ON order.product = product.id_product where user = '$id_user'";
+            $output = "SELECT * FROM `order` JOIN `product` ON order.product = product.id_product where user = '$id_user' and status = 3";
             $output_res = mysqli_query($con, $output);
 
             while ($info_bus = mysqli_fetch_array($output_res)) {
@@ -44,25 +47,23 @@ $res_prod = mysqli_query($con, $insert_prod);
                     <td class="td_busket"><?= $info_bus['name'] ?></td>
                     <td class="td_busket"><?= $info_bus['cost'] ?>₽</td>
                     <td class="td_busket"><?= $info_bus['count'] ?></td>
-                    <td class="td_busket"><a href="/buscket.php?del=<?= $info_bus['id_order'] ?>"><img src="/img/cancel.svg" alt="cancel.svg"></a></td>
+                    <td class="td_busket"><a href="/deleteBuscket.php?del=<?= $info_bus['id_order'] ?>"><img src="/img/cancel.svg" alt="cancel.svg"></a></td>
                 </tr>
             <?
-                $sum = $info_bus['cost'] + $sum;
+           
             }
-            $del_id = !empty($_GET['del']) ? $_GET['del'] : false;
-            $delete = "DELETE FROM `order` WHERE id_order = '$del_id'";
-
-            $del_res = mysqli_query($con, $delete);
             ?>
         </table>
         <form action="/buscketDB.php" method="post" style= "margin-top:30px;">
             <div class="info_busket">
                 <span class="text_busket_info">Доставка</span>
-                <input type="hidden" value = "">
+                <form action="/buscketDB.php" method="post">
                 <input class="adres_input" type="text" name="adres" placeholder="Адрес" required>
-                <span class="text_busket_info"><?= $sum?>₽</span>
+                <span class="text_busket_info">10000₽</span>
                 <button class="request_input_but">Оформить</button>
-
+                </form>
+                <?
+                ?>
             </div>
         </form>
     </div>

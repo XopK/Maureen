@@ -4,7 +4,7 @@
     $query = "delete from product where id_product= '$id'";
     $result = mysqli_query($con, $query);
     if($result) {
-        echo "<script>alert('Успех'); location.href = '/personalArea.php';</script>";
+        echo "<script>alert('Товар удален'); location.href = '/personalArea.php';</script>";
     } else {
         echo "<script>alert('Ошибка');</script>";
         echo mysqli_error($con);

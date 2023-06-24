@@ -13,7 +13,7 @@ if (!empty($_POST)) {
     $addUser_Result = mysqli_query($con, $addUser);
 
     if ($addUser_Result) {
-        echo "<script>alert('Успех'); location.href = '/';</script>";
+        echo "<script>alert('Регистрация прошла успешно'); location.href = '/';</script>";
     } else {
         echo "<script>alert('Ошибка');</script>";
         echo mysqli_error($con);

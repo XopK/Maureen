@@ -19,9 +19,9 @@
     <div class="form_block">
         <form method="POST" action="/authorizationDB.php">
             <p><label for="phone">Телефон</label></p>
-            <input id="phone" required class="reg_auth_input" type="text" name="phone" >
+            <input id="phone" required class="reg_auth_input" type="text" name="phone" pattern="[0-9]{11}">
             <p><label for="password">Пароль</label></p>
-            <input id="password" required class="reg_auth_input" type="password" name="password">
+            <input id="password" required class="reg_auth_input" type="password" name="password" maxlength="50" pattern="^(?=^.{8,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
             <div class="form_but_cent">
                 <button class="form_btn">Войти</button>
             </div>

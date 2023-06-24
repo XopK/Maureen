@@ -11,7 +11,7 @@ if(!empty($_POST)){
     $result = mysqli_query($con,$review_add);
 
     if ($result) {
-        echo "<script>alert('Успех'); location.href = '/product.php';</script>";
+        echo "<script>alert('Отзыв оставлен'); location.href = '/product.php?id_catalogue=$id_prod';</script>";
     } else {
         echo "<script>alert('Ошибка');</script>";
         echo mysqli_error($con);

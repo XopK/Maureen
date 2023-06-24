@@ -17,7 +17,7 @@
         $product_query = "update product set name = '$name',photo_product = '$filename',description = '$description',amount = '$amount',cost = '$cost' where id_product = '$id'";
         $result_request = mysqli_query($con,$product_query);
         if($result_request) {
-            echo "<script>alert('Успех'); location.href = '/personalArea.php';</script>";
+            echo "<script>alert('Товар изменен'); location.href = '/personalArea.php';</script>";
             move_uploaded_file($_FILES['photo']['tmp_name'], $path);
         } else {
             echo "<script>alert('Ошибка');</script>";

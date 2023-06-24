@@ -12,7 +12,7 @@ if (!empty($_POST)) {
     VALUES (null,'$id','$ogrnip','$passport','$ip','$date')";
     $result_request = mysqli_query($con,$request_query);
     if ($result_request) {
-        echo "<script>alert('Успех'); location.href = '/personalArea.php';</script>";
+        echo "<script>alert('Заявка отправлена'); location.href = '/personalArea.php';</script>";
     } else {
         echo "<script>alert('Ошибка');</script>";
         echo mysqli_error($con);

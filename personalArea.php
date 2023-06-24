@@ -33,20 +33,30 @@
             </button>
             <div class="orders_profile_list1">
                 <div class="orders_profile_list2">
-                    <div class="order_card">
+                    <?php
+                    $order_profile = "SELECT * FROM `order` JOIN `product` ON order.product = product.id_product JOIN `status` ON order.status = status.id_status where user = '$id_user'";
+                    $result_profile = mysqli_query($con,$order_profile);
+
+                    while ($order_inf = mysqli_fetch_array($result_profile)){
+                        ?>
+                        <div class="order_card">
                         <div class="order_card_left">
                             <div class="order_card_left_img">
-                                <img src="/img/309d3d87-10bf-492d-8ac3-b39efca69cd3.jpg" alt="">
+                                <img src="/img/<?=$order_inf['photo_product']?>" alt="<?=$order_inf['photo_product']?>">
                             </div>
                         </div>
                         <div class="order_card_right">
-                            <p class="order_card_right_number">Заказ: 2514144264</p>
-                            <p class="order_card_right_name">Товар:</p>
-                            <p class="order_card_right_text">Количество:</p>
-                            <p class="order_card_right_text">Адрес:</p>
-                            <p class="order_card_right_status">Статус:</p>
+                            <p class="order_card_right_number">Заказ: <?=$order_inf['code_order']?></p>
+                            <p class="order_card_right_name">Товар: <?=$order_inf['name']?></p>
+                            <p class="order_card_right_text">Количество: <?=$order_inf['count']?></p>
+                            <p class="order_card_right_text">Адрес: <?=$order_inf['adress']?></p>
+                            <p class="order_card_right_status">Статус: <?=$order_inf['name_status']?></p>
                         </div>
                     </div>
+                        <?
+                    }
+                    ?>
+                    
                 </div>
             </div>
 
